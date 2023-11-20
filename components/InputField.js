@@ -30,7 +30,6 @@ const InputField = ({ placeholder, label, value, onChangeText }) => {
       </View>
       <View style={styles.inputView}>
         <TextInput
-          autoCapitalize="none"
           style={styles.textInput}
           placeholder={placeholder}
           placeholderTextColor="#666"
