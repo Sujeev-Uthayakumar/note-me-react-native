@@ -12,7 +12,7 @@ import {
 
 import InputField from "../components/InputField";
 
-const NoteScreen = () => {
+const NoteScreen = ({ navigation }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [note, setNote] = useState("");
@@ -22,7 +22,13 @@ const NoteScreen = () => {
     const hasErrors = checkIfFieldsAreEmpty();
 
     if (!hasErrors) {
-      // Submit the form
+      const savedNote = {
+        title,
+        description,
+        note,
+        key: Math.random().toString(),
+      };
+      navigation.navigate("Home", { note: savedNote });
     }
   };
 
