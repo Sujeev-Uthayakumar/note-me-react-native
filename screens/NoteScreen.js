@@ -61,7 +61,7 @@ const NoteScreen = ({ navigation }) => {
         onChangeText={setDescription}
       />
       <View style={styles.textContainer}>
-        <Text>Notes</Text>
+        <Text>Note</Text>
         <View style={styles.inputView}>
           <TextInput
             style={styles.largeInput}
